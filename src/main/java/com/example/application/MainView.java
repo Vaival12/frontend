@@ -33,10 +33,10 @@ public class MainView extends VerticalLayout {
 
         textField1 = new TextField("Результат запроса с бэкенда");
         textField1.setReadOnly(true);
-        Button getButton = new Button("Получить данные с бэкенда", event -> getData());
+        //Button getButton = new Button("Получить данные с бэкенда", event -> getData());
 
 
-        add(textField, sendButton,textField1,getButton);
+        add(textField, sendButton,textField1);
     }
 
     // Метод для отправки данных на бэкенд
@@ -56,17 +56,6 @@ public class MainView extends VerticalLayout {
             return "Ошибка при отправке данных на сервер.";
         }
     }
-    private void getData() {
-        RestTemplate restTemplate = new RestTemplate();
-        String backendUrl = "http://localhost:8080/api/getBackend"; //
 
-        try {
-            String response = restTemplate.getForObject(backendUrl, String.class);
-            textField1.setValue(response != null ? response : "Нет данных");
-        } catch (Exception e) {
-            Notification.show("Ошибка при получении данных с бэкенда");
-            e.printStackTrace();
-        }
-    }
 
 }
