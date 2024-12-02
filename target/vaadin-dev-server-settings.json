@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "C:/Users/ПК/Desktop/DevOps/frontend/src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/ПК/Desktop/DevOps/frontend/src/main/frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/ПК/Desktop/DevOps/frontend/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\ПК\\Desktop\\DevOps\\frontend\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\ПК\\Desktop\\DevOps\\frontend\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/ПК/Desktop/DevOps/frontend/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/ПК/Desktop/DevOps/frontend/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/ПК/Desktop/DevOps/frontend/src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "C:\\Users\\ПК\\Desktop\\DevOps\\frontend\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

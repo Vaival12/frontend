@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <script>
+        function sendData() {
+            const input = document.getElementById('inputText').value;
+            fetch('http://localhost:8081/submitData?input=' + encodeURIComponent(input), { method: 'POST' })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => alert('Error: ' + error));
+        }
+
+        function readData() {
+            fetch('http://localhost:8081/readData', { method: 'GET' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok: ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Отображаем полученные данные на странице
+                    document.getElementById('outputText').innerHTML = data;
+                })
+                .catch(error => alert('Error: ' + error));
+        }
+    </script>
+</head>
+<body>
+<h1>Отправка и чтение данных</h1>
+<input type="text" id="inputText" placeholder="Введите текст">
+<button onclick="sendData()">Отправить</button>
+
+<h2>Читать данные</h2>
+<button onclick="readData()">Показать содержимое файла</button>
+<div id="outputText"></div>
+</body>
+</html>
