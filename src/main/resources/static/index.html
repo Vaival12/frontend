@@ -7,14 +7,14 @@
     <script>
         function sendData() {
             const input = document.getElementById('inputText').value;
-            fetch('http://localhost:8081/submitData?input=' + encodeURIComponent(input), { method: 'POST' })
+            fetch('http://127.0.0.1:8081/submitData?input=' + encodeURIComponent(input), { method: 'POST' })
                 .then(response => response.text())
                 .then(data => alert(data))
                 .catch(error => alert('Error: ' + error));
         }
 
         function readData() {
-            fetch('http://localhost:8081/readData', { method: 'GET' })
+            fetch('http://127.0.0.1:8081/readData', { method: 'GET' })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok: ' + response.statusText);
